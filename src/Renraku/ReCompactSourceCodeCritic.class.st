@@ -15,3 +15,18 @@ ReCompactSourceCodeCritic class >> for: anEntity selector: aSelector by: aRule [
 		tinyHint: aSelector;
 		yourself
 ]
+
+{ #category : 'accessing' }
+ReCompactSourceCodeCritic >> change [
+	| cm |
+	cm := self sourceAnchor sourceEntity.
+	^ ReChangeFactory instance
+		addMethodSource: (ReMethodSourceCleaner clean: cm sourceCode) 
+		in: cm origin
+]
+
+{ #category : 'testing' }
+ReCompactSourceCodeCritic >> providesChange [
+
+	^ true
+]

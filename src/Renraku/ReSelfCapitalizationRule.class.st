@@ -9,6 +9,11 @@ Class {
 	#tag : 'Rules'
 }
 
+{ #category : 'manifest' }
+ReSelfCapitalizationRule class >> uniqueIdentifierName [
+    ^ 'SelfCapitalization'
+]
+
 { #category : 'checking' }
 ReSelfCapitalizationRule >> checkMethod: aMethod [
     (self includesWord: 'Self' in: aMethod sourceCode) ifTrue: [
