@@ -37,35 +37,17 @@ ReBooleanCapitalizationRule >> detectBoolean: aForm in: sourceCode for: aMethod 
 
 { #category : 'accessing' }
 ReBooleanCapitalizationRule >> group [
-    ^ 'Erreurs débutant'
-]
-
-{ #category : 'private' }
-ReBooleanCapitalizationRule >> includesWord: aWord in: sourceCode [
-    | start index before after |
-    start := 1.
-    [ index := sourceCode indexOfSubCollection: aWord startingAt: start.
-      index > 0 ] whileTrue: [
-        before := index > 1
-            ifTrue: [ sourceCode at: index - 1 ]
-            ifFalse: [ Character space ].
-        after := (index + aWord size) <= sourceCode size
-            ifTrue: [ sourceCode at: index + aWord size ]
-            ifFalse: [ Character space ].
-        (before isAlphaNumeric or: [ after isAlphaNumeric ])
-            ifFalse: [ ^ true ].
-        start := index + 1 ].
-    ^ false
+    ^ 'Noobs Errors'
 ]
 
 { #category : 'accessing' }
 ReBooleanCapitalizationRule >> name [
-    ^ 'Booléens mal capitalisés'
+    ^ 'Booleans bad capitalized'
 ]
 
 { #category : 'accessing' }
 ReBooleanCapitalizationRule >> rationale [
-    ^ 'En Pharo, les booléens et nil doivent être écrits en minuscules: true, false, nil'
+    ^ 'In Pharo, booleans and nil must be written in lowercase: true, false, nil'
 ]
 
 { #category : 'accessing' }

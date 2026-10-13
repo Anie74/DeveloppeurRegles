@@ -39,3 +39,14 @@ ReSelfCapitalisationRuleTest >> testNoFalsePositives [
         checkMethod: (TestBooleanClass >> #testMethod).
     self assert: critiques isEmpty
 ]
+
+{ #category : 'tests' }
+ReSelfCapitalisationRuleTest >> testRuleMetadata [
+    | rule |
+    rule := ReSelfCapitalizationRule new.
+    self assert: rule severity equals: #error.
+    self assert: rule group equals: 'Erreurs débutant'.
+    self deny: rule name isEmpty.
+    self deny: rule rationale isEmpty.
+    self assert: rule class uniqueIdentifierName equals: 'SelfCapitalization'
+]

@@ -10,5 +10,6 @@ Class {
 
 { #category : 'as yet unclassified' }
 TestBooleanClass >> testMethod [
-        ^ self printString
+        "x ifFalse[ ^ 0 ]"
+        ^ 1
 ]
