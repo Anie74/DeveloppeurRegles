@@ -10,6 +10,5 @@ Class {
 
 { #category : 'as yet unclassified' }
 TestBooleanClass >> testMethod [
-        "x ifFalse[ ^ 0 ]"
         ^ 1
 ]

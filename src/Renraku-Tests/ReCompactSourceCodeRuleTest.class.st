@@ -8,3 +8,9 @@ Class {
 	#package : 'Renraku-Tests',
 	#tag : 'Rules'
 }
+
+{ #category : 'tests' }
+ReCompactSourceCodeRuleTest >> testCriticizeFinalDotIsEnabledByDefault [
+
+	self assert: ReCompactSourceCodeRule criticizeFinalDotInMethodBody
+]
