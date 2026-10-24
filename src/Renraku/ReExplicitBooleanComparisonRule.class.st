@@ -9,6 +9,16 @@ Class {
 	#tag : 'Rules'
 }
 
+{ #category : 'accessing' }
+ReExplicitBooleanComparisonRule class >> ruleName [
+    ^ 'Explicit Comparaison with true or false'
+]
+
+{ #category : 'manifest' }
+ReExplicitBooleanComparisonRule class >> uniqueIdentifierName [
+    ^ 'ExplicitBooleanComparison'
+]
+
 { #category : 'checking' }
 ReExplicitBooleanComparisonRule >> checkMethod: aMethod [
     | critiques |

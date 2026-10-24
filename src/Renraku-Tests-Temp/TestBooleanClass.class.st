@@ -10,5 +10,6 @@ Class {
 
 { #category : 'as yet unclassified' }
 TestBooleanClass >> testMethod [
-        ^ 1
+        | unused |
+        ^ True
 ]

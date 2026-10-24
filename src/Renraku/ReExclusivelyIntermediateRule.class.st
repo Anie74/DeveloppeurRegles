@@ -61,6 +61,11 @@ ReExclusivelyIntermediateRule class >> newCritiqueFor: aMethod hint: aString [
         yourself
 ]
 
+{ #category : 'ruleName' }
+ReExclusivelyIntermediateRule class >> ruleName [
+^'Intermediate errors rule'
+]
+
 { #category : 'testing' }
 ReExclusivelyIntermediateRule class >> sourceTextOf: aNode in: aMethod [
     "Texte source exact d'un nœud de l'AST"
@@ -121,6 +126,6 @@ ReExclusivelyIntermediateRule >> sourceTextOf: aNode in: aMethod [
 ]
 
 { #category : 'accessing' }
-ReExclusivelyIntermediateRule >> uniqueIdentifierName [
-^ 'Intermediate developpers rule'
+ReExclusivelyIntermediateRule >> uniqueIdentifierName [ 
+^ 'Intermediate errors rule'
 ]
